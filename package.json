@@ -1,0 +1,24 @@
+{
+    "name": "APEX Theme Documentation",
+    "version": "1.0.0",
+    "author": "Vincent Morneau",
+    "description": "APEX Plugin to Help with Application Documentation",
+    "link": "https://apex.oracle.com/pls/apex/f?p=12192:21",
+    "license": "MIT",
+    "keywords": [
+        "oracle",
+        "apex",
+        "orclapex",
+        "theme",
+        "doc",
+        "documentation"
+        "region"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vincentmorneau/apex-theme-documentation.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vincentmorneau/apex-theme-documentation/issues"
+    }
+}
