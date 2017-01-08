@@ -145,7 +145,7 @@ function render (
             when 'FIELD' then
                 l_template_id_column := 'item_label_template_id';
                 l_template_options_column := 'item_template_options';
-                l_component_name_column := 'item_name';
+                l_component_name_column := 'item_name || '' ('' || display_as || '')''';
                 l_template_name_column := 'item_label_template';
                 p_table_name := 'apex_application_page_items';
                 p_column_name := 'item_id';
@@ -153,7 +153,7 @@ function render (
                 l_template_id_column := 'list_template_override_id';
                 l_template_options_column := 'component_template_options';
                 l_component_name_column := 'region_name';
-                l_template_name_column := 'template';
+                l_template_name_column := 'list_template_override';
                 p_table_name := 'apex_application_page_regions';
                 p_column_name := 'region_id';
             when 'REGION' then
@@ -167,7 +167,7 @@ function render (
                 l_template_id_column := 'report_template_id';
                 l_template_options_column := 'component_template_options';
                 l_component_name_column := 'region_name';
-                l_template_name_column := 'template';
+                l_template_name_column := 'report_template';
                 p_table_name := 'apex_application_page_regions';
                 p_column_name := 'region_id';
         end case;
@@ -179,8 +179,7 @@ function render (
             , ' || p_column_name || '
         from ' || p_table_name || '
         where region_id = :p_region_id
-        and rownum = 1'; -- get first component
-        -- todo loop over this?
+        and rownum = 1'; -- only document first component
 
         execute immediate l_sql
         into p_template_id
