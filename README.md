@@ -14,7 +14,7 @@ This plugin is mostly useful for building themes.
 
 ## Attributes
 
-**Application**
+#### Application
 Name | Type | Description
 --- | --- | --
 `CSS Classes - table` | Text | This class name will be applied to the "table" HTML tag of all documentation components.
@@ -23,7 +23,7 @@ Name | Type | Description
 `CSS Classes - td` | Text | This class name will be applied to the "td" HTML tag of all documentation components.
 `CSS Classes - Component Title` | Text | This class name will be applied to the component title of all documentation components.
 
-**Component**
+#### Component
 Name | Type | Description
 --- | --- | --
 `Component Type` | Select List | This indicates what type of component you are documenting (item, region, report, etc.).
@@ -37,4 +37,7 @@ Name | Type | Description
 ![demo2](/docs/apex-theme-documentation-2.png)
 
 ## Changelog
-[See changelog](changelog.md).
+[See changelog.](changelog.md)
+
+## License
+MIT © [Vincent Morneau](http://vmorneau.me)
